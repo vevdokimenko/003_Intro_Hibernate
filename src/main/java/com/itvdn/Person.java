@@ -13,6 +13,9 @@ public class Person {
     private int age;
     private String gender;
 
+    public Person() {
+    }
+
     public int getId() {
         return id;
     }
