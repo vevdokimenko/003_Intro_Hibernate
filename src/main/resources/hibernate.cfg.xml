@@ -1,0 +1,44 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-configuration SYSTEM
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+
+        <property name="hibernate.dialect">
+            org.hibernate.dialect.MySQL5Dialect
+        </property>
+
+        <property name="hibernate.connection.driver_class">
+            com.mysql.cj.jdbc.Driver
+        </property>
+
+        <property name="hibernate.connection.url">
+            jdbc:mysql://localhost:3306/carsshop?serverTimezone=UTC
+        </property>
+
+
+        <property name="hibernate.connection.username">
+            root
+        </property>
+
+        <property name="hibernate.connection.password">
+            advantis
+        </property>
+
+        <property name="connection.pool_size">
+            10
+        </property>
+
+        <!-- create - каждый раз создает новую таблицу -->
+        <!-- update - создает таблицу, если ее нет и добавляет данные, таблицу не пересоздает -->
+        <property name="hbm2ddl.auto">update</property>
+
+        <!--        для того, чтобы видеть SQL запросы-->
+        <property name="show_sql">true</property>
+
+
+        <mapping class="com.itvdn.Person"/>
+
+    </session-factory>
+</hibernate-configuration>
