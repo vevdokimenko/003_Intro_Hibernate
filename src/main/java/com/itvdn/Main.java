@@ -12,8 +12,8 @@ public class Main {
         sessionFactory = new Configuration().configure().buildSessionFactory();
 
         Person person = new Person();
-        person.setName("Alex");
-        person.setAge(30);
+        person.setName("Ivan");
+        person.setAge(28);
         person.setGender("Male");
 
         commitPerson(person);

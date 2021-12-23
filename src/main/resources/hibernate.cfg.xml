@@ -27,7 +27,7 @@
         </property>
 
         <property name="connection.pool_size">
-            10
+            1
         </property>
 
         <!-- create - каждый раз создает новую таблицу -->
